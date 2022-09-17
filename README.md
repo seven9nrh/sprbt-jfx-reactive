@@ -1,5 +1,7 @@
 # sprbt-jfx-reactive
 
+[![Java CI with Maven](https://github.com/seven9nrh/sprbt-jfx-reactive/actions/workflows/maven.yml/badge.svg)](https://github.com/seven9nrh/sprbt-jfx-reactive/actions/workflows/maven.yml)
+
 ## Features
 - JavaFX Descption Application
 
