@@ -1,13 +1,11 @@
-package com.seven9nrh.sprbtpr1;
+package com.seven9nrh.sprbtjfxreactive;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SprbtPr1ApplicationTests {
+class SprbtJfxReactiveApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
-
+  @Test
+  void contextLoads() {}
 }
