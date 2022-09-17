@@ -1,7 +1,7 @@
-# sprbt-web-template
+# sprbt-jfx-reactive
 
 ## Features
-- Spring Boot Maven Template Project
+- JavaFX Descption Application
 
 ## Requirements
 Building requires:
@@ -17,4 +17,4 @@ Building requires:
 
 ## Licence
 
-[MIT](https://......)
+[Apache License 2.0](https://github.com/seven9nrh/sprbt-jfx-reactive/blob/main/LICENSE)
