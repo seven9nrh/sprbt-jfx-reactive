@@ -1,5 +1,6 @@
 package com.seven9nrh.sprbtjfxreactive.application.views;
 
+import com.seven9nrh.sprbtjfxreactive.model.ApiKey;
 import com.seven9nrh.sprbtjfxreactive.repository.SettingsRepository;
 import java.io.IOException;
 import javafx.event.ActionEvent;
@@ -40,13 +41,13 @@ public class SettingsController {
 
   @FXML
   protected void handleBtnOk(ActionEvent event) throws IOException {
-    settingsRepository.saveApiKey(textApiKey.getText());
+    settingsRepository.saveApiKey(new ApiKey(textApiKey.getText()));
     ((Node) (event.getSource())).getScene().getWindow().hide();
   }
 
   @FXML
   protected void initialize() {
     logger.info("initialize");
-    textApiKey.setText(settingsRepository.getApiKey());
+    textApiKey.setText(settingsRepository.getApiKey().getBearerToken());
   }
 }

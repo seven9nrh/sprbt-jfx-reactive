@@ -1,7 +1,9 @@
 package com.seven9nrh.sprbtjfxreactive.repository;
 
-public interface SettingsRepository {
-  public String getApiKey();
+import com.seven9nrh.sprbtjfxreactive.model.ApiKey;
 
-  public void saveApiKey(String apiKey);
+public interface SettingsRepository {
+  public ApiKey getApiKey();
+
+  public void saveApiKey(ApiKey apiKey);
 }

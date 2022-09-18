@@ -2,6 +2,7 @@ package com.seven9nrh.sprbtjfxreactive.application;
 
 import com.seven9nrh.sprbtjfxreactive.SprbtJfxReactiveApplication;
 import javafx.application.Application;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +26,21 @@ public class JFXApplication extends Application {
   @Override
   public void start(Stage arg0) throws Exception {
     applicationContext.publishEvent(new StageReadyEvent(arg0));
+    // Exception Handler
+    Thread
+      .currentThread()
+      .setUncaughtExceptionHandler(
+        (t, e) -> {
+          showErrorDialog(e);
+        }
+      );
+  }
+
+  protected void showErrorDialog(Throwable e) {
+    Alert dialog = new Alert(Alert.AlertType.WARNING, e.getMessage());
+    dialog.setTitle(e.getClass().getSimpleName());
+    dialog.setHeaderText(null);
+    dialog.showAndWait();
   }
 
   @Override

@@ -1,5 +1,6 @@
 package com.seven9nrh.sprbtjfxreactive.repository.impl;
 
+import com.seven9nrh.sprbtjfxreactive.model.ApiKey;
 import com.seven9nrh.sprbtjfxreactive.repository.SettingsRepository;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -19,31 +20,34 @@ public class SettingsRepositoryImpl implements SettingsRepository {
   @Value("${sprbtjfxreactive.settings.file}")
   private String settingsFilePath;
 
-  private static final String PROP_API_KEY = "apiKey";
+  private static final String PROP_API_KEY_BEARER_TOKEN = "apiKey.bearerToken";
 
   @Override
-  public String getApiKey() {
+  public ApiKey getApiKey() {
     Properties properties = new Properties();
     try (
       FileInputStream fileInputStream = new FileInputStream(settingsFilePath);
     ) {
       properties.load(fileInputStream);
-      return properties.getProperty(PROP_API_KEY);
+      var apiKey = new ApiKey(
+        properties.getProperty(PROP_API_KEY_BEARER_TOKEN)
+      );
+      return apiKey;
     } catch (IOException e) {
       logger.warn("Properties load failure.", e);
     }
-    return "";
+    return new ApiKey.NoApiKey();
   }
 
   @Override
-  public void saveApiKey(String apiKey) {
+  public void saveApiKey(ApiKey apiKey) {
     Properties properties = new Properties();
     try (InputStream inputStream = new FileInputStream(settingsFilePath);) {
       properties.load(inputStream);
     } catch (IOException e) {
       logger.warn("Properties load failure.", e);
     }
-    properties.setProperty(PROP_API_KEY, apiKey);
+    properties.setProperty(PROP_API_KEY_BEARER_TOKEN, apiKey.getBearerToken());
     try (
       FileOutputStream fileOutputStream = new FileOutputStream(
         settingsFilePath
