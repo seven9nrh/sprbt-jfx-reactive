@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="vboxRoot" maxHeight="-Infinity" maxWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.seven9nrh.sprbtjfxreactive.application.views.TweetFormController">
+   <children>
+      <GridPane style="-fx-border-style: dotted;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="259.0" minWidth="10.0" prefWidth="186.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="454.0" minWidth="10.0" prefWidth="454.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="454.0" minWidth="10.0" prefWidth="454.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="NEVER" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="id" GridPane.rowIndex="1" />
+            <Label text="text" GridPane.rowIndex="2" />
+            <Label text="possiblysensitive" GridPane.rowIndex="5" />
+            <Label text="createAt" GridPane.rowIndex="3" />
+            <Label text="authorId" GridPane.rowIndex="4" />
+            <Label text="retweetCount" GridPane.rowIndex="6" />
+            <Label text="replyCount" GridPane.rowIndex="7" />
+            <Label text="likiCount" GridPane.rowIndex="8" />
+            <Label text="quoteCount" GridPane.rowIndex="9" />
+            <Label text="user.id" GridPane.rowIndex="10" />
+            <Text fx:id="txtId" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Text fx:id="txtCreateAt" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Text fx:id="txtAuthorId" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Text fx:id="txtPossiblysensitive" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Text fx:id="txtRetweetCount" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Text fx:id="txtReplyCount" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Text fx:id="likeCount" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Text fx:id="txtQuoteCount" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Text fx:id="txtUserId" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Label text="username" GridPane.rowIndex="11" />
+            <Label text="description" GridPane.rowIndex="12" />
+            <Label text="name" GridPane.rowIndex="13" />
+            <Text fx:id="txtUsername" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <Text fx:id="txtName" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+            <TextFlow fx:id="txtText" GridPane.columnIndex="1" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.vgrow="SOMETIMES" />
+            <Text fx:id="txtId1" layoutX="197.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextFlow fx:id="txtText1" layoutX="197.0" layoutY="28.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Text fx:id="txtCreateAt1" layoutX="197.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Text fx:id="txtAuthorId1" layoutX="197.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Text fx:id="txtPossiblysensitive1" layoutX="197.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Text fx:id="txtRetweetCount1" layoutX="197.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Text fx:id="txtReplyCount1" layoutX="197.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <Text fx:id="likeCount1" layoutX="197.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <Text fx:id="txtQuoteCount1" layoutX="197.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <Text fx:id="txtUserId1" layoutX="197.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+            <Text fx:id="txtUsername1" layoutX="197.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+            <Text fx:id="txtName1" layoutX="197.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #EEBBFF;" text="field" />
+            <Label alignment="CENTER" layoutX="11.0" layoutY="11.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #99BBFF;" text="UserData for the selected row" GridPane.columnIndex="1" />
+            <Label alignment="CENTER" layoutX="11.0" layoutY="11.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #99EEFF;" text="UserData obtained by API" GridPane.columnIndex="2" />
+            <TextFlow fx:id="txtDescription" layoutX="651.0" layoutY="58.0" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <TextFlow fx:id="txtDescription1" layoutX="197.0" layoutY="228.0" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+         </children>
+      </GridPane>
+      <Pane nodeOrientation="RIGHT_TO_LEFT">
+         <children>
+            <Button fx:id="btnClose" alignment="CENTER" defaultButton="true" layoutX="10.0" mnemonicParsing="false" onAction="#handleBtnClose" text="Close" />
+         </children>
+      </Pane>
+   </children>
+</VBox>

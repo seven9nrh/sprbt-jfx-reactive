@@ -1,7 +1,7 @@
 package com.seven9nrh.sprbtjfxreactive.application.views;
 
 import com.seven9nrh.sprbtjfxreactive.repository.TweetDataRepository;
-import com.seven9nrh.twitter.model.TweetData;
+import com.seven9nrh.twitter.tweets.model.TweetData;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import javafx.application.Platform;
@@ -18,6 +18,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
@@ -35,6 +36,9 @@ public class SearchAnyTweetController {
 
   @Autowired
   TweetDataRepository tweetDataRepository;
+
+  @Autowired
+  TweetFormController tweetFormController;
 
   @FXML
   private Button btnSearch;
@@ -200,6 +204,19 @@ public class SearchAnyTweetController {
       var content = new javafx.scene.input.ClipboardContent();
       content.putString(tweetData.getText());
       clipboard.setContent(content);
+    }
+  }
+
+  @FXML
+  void handleSelectedRow(MouseEvent event) {
+    // double click
+    if (event.getClickCount() == 2) {
+      var tweetData = lstMain.getSelectionModel().getSelectedItem();
+      if (tweetData != null) {
+        tweetFormController.initScreen(tweetData);
+      } else {
+        throw new IllegalArgumentException("tweetData is null");
+      }
     }
   }
 }

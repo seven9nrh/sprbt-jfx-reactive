@@ -72,7 +72,7 @@
             </Button>
          </children>
       </HBox>
-      <TableView fx:id="lstMain" VBox.vgrow="ALWAYS">
+      <TableView fx:id="lstMain" onMouseClicked="#handleSelectedRow" VBox.vgrow="ALWAYS">
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
