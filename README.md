@@ -1,6 +1,8 @@
 # sprbt-jfx-reactive
 
 [![Java CI with Maven](https://github.com/seven9nrh/sprbt-jfx-reactive/actions/workflows/maven.yml/badge.svg)](https://github.com/seven9nrh/sprbt-jfx-reactive/actions/workflows/maven.yml)
+[![CodeQL](https://github.com/seven9nrh/sprbt-jfx-sns-app/actions/workflows/codeql.yml/badge.svg)](https://github.com/seven9nrh/sprbt-jfx-sns-app/actions/workflows/codeql.yml)
+[![Dependency Review](https://github.com/seven9nrh/sprbt-jfx-sns-app/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/seven9nrh/sprbt-jfx-sns-app/actions/workflows/dependency-review.yml)
 
 ## Features
 - JavaFX Descption Application
