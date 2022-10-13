@@ -37,7 +37,8 @@ jobs:
         # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
 
     steps:
-    - uses: actions/setup-java@v1
+    - name: Setup Java JDK
+      uses: actions/setup-java@v3.5.1
       with:
         java-version: 17
 
