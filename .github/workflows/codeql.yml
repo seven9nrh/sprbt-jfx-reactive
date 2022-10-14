@@ -45,6 +45,8 @@ jobs:
 
     - name: Checkout repository
       uses: actions/checkout@v3
+      with:
+        submodules: recursive
 
     - name: Build with Maven submodule
       run: mvn -B install --file ./nrh-sns-client/pom.xml -Dmaven.test.skip=true
